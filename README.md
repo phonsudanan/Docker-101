@@ -22,3 +22,9 @@ COPY index.html /usr/share/nginx/html/index.html
 
 #### Workshop  วันที่ 3 Pull จากของเพื่อน
 ![Pull ของเพื่อน](https://github.com/phonsudanan/Docker-101/blob/main/img/CaptureD3-2.PNG?raw=true)
+
+
+
+#### เขียน  docker compost สร้าง image รัน container
+![img](https://github.com/phonsudanan/Docker-101/blob/main/img/CaptureD4.PNG?raw=true)
+
