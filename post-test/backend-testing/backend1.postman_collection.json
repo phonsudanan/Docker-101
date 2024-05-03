@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "9f48a21f-0d78-4180-ac05-d28574342a9d",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31857277",
+		"_collection_link": "https://grey-flare-247992.postman.co/workspace/Workshop-API-first~e77968ea-3ab4-4871-89d7-49f56e5fc97d/collection/31857277-9f48a21f-0d78-4180-ac05-d28574342a9d?action=share&source=collection_link&creator=31857277"
+	},
+	"item": [
+		{
+			"name": "Get all user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Schema is valid\", function () {",
+							"  var schema = {",
+							"    type: \"array\",",
+							"    items: {",
+							"      type: \"object\",",
+							"      properties: {",
+							"        id: { type: \"number\" },",
+							"        name: { type: \"string\" },",
+							"        email: { type: \"string\" }",
+							"      },",
+							"      required: [\"id\", \"name\", \"email\"]",
+							"    }",
+							"  };",
+							"",
+							"  var response = pm.response.json();",
+							"  pm.expect(tv4.validate(response, schema)).to.be.true;",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://backend1/users",
+					"protocol": "http",
+					"host": [
+						"backend1"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

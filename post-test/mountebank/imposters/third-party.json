@@ -1,0 +1,23 @@
+{
+    "protocol": "https",
+    "port": 8090,
+    "stubs": [
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "GET"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/users"
+                    }
+                }
+            ],
+            "responses": [
+                
+            ]
+        }
+    ]
+}

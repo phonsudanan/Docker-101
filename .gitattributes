@@ -1,0 +1,5 @@
+'docker-compose/backend-testing/api-test.postman_collection.json' -text
+'docker-compose/backend-testing/report/api-test-2024-05-03-10-45-54-317-0.html' -text
+'docker-compose/backend-testing/report/api-test-2024-05-03-10-53-47-240-0.html' -text
+'docker-compose/backend-testing/report/newman-run-report-2024-05-03-10-45-54-318-0.xml' -text
+'docker-compose/backend-testing/report/newman-run-report-2024-05-03-10-53-47-241-0.xml' -text
