@@ -28,3 +28,17 @@ COPY index.html /usr/share/nginx/html/index.html
 #### เขียน  docker compost สร้าง image รัน container
 ![img](https://github.com/phonsudanan/Docker-101/blob/main/img/CaptureD4.PNG?raw=true)
 
+
+
+#### frontend
+![img](https://github.com/phonsudanan/Docker-101/blob/main/img/CaptureD5-0.PNG?raw=true)
+
+
+
+#### backend_test ไฟล์ที่ export มาจาก postman แล้วรัน
+![img](https://github.com/phonsudanan/Docker-101/blob/main/img/CaptureD5-1.PNG?raw=true)
+
+
+
+#### backend_test ไฟล์ที่ export มาจาก postman หลังจาก เปลี่ยน localhost เป็น backend
+![img](https://github.com/phonsudanan/Docker-101/blob/main/img/CaptureD5-2.PNG?raw=true)
