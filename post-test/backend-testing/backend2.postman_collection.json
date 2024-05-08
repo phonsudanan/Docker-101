@@ -1,14 +1,14 @@
 {
 	"info": {
-		"_postman_id": "9f48a21f-0d78-4180-ac05-d28574342a9d",
-		"name": "User",
+		"_postman_id": "6f5c3978-de15-4b30-afb4-d7fb37ccd794",
+		"name": "Backend2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "31857277",
-		"_collection_link": "https://grey-flare-247992.postman.co/workspace/Workshop-API-first~e77968ea-3ab4-4871-89d7-49f56e5fc97d/collection/31857277-9f48a21f-0d78-4180-ac05-d28574342a9d?action=share&source=collection_link&creator=31857277"
+		"_exporter_id": "34784294",
+		"_collection_link": "https://speeding-space-165079.postman.co/workspace/Team-Workspace~cc11f80e-2e95-48e9-8765-5b3bdeffc24e/collection/34784294-6f5c3978-de15-4b30-afb4-d7fb37ccd794?action=share&source=collection_link&creator=34784294"
 	},
 	"item": [
 		{
-			"name": "Get pet Copy",
+			"name": "Get pet",
 			"event": [
 				{
 					"listen": "test",
@@ -70,7 +70,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://backend2/pets",
+					"raw": "http://backend2:3001/pets",
 					"protocol": "http",
 					"host": [
 						"backend2"
@@ -84,7 +84,7 @@
 			"response": []
 		},
 		{
-			"name": "Get food Copy",
+			"name": "Get food",
 			"event": [
 				{
 					"listen": "test",
@@ -143,7 +143,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://backend2/foods",
+					"raw": "http://backend2:3001/foods",
 					"protocol": "http",
 					"host": [
 						"backend2"

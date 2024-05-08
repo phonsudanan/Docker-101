@@ -1,14 +1,14 @@
 {
 	"info": {
-		"_postman_id": "9f48a21f-0d78-4180-ac05-d28574342a9d",
-		"name": "User",
+		"_postman_id": "adc26602-8267-44cd-b2b1-5ff58ff00580",
+		"name": "Third party",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "31857277",
-		"_collection_link": "https://grey-flare-247992.postman.co/workspace/Workshop-API-first~e77968ea-3ab4-4871-89d7-49f56e5fc97d/collection/31857277-9f48a21f-0d78-4180-ac05-d28574342a9d?action=share&source=collection_link&creator=31857277"
+		"_exporter_id": "34784294",
+		"_collection_link": "https://speeding-space-165079.postman.co/workspace/Team-Workspace~cc11f80e-2e95-48e9-8765-5b3bdeffc24e/collection/34784294-adc26602-8267-44cd-b2b1-5ff58ff00580?action=share&source=collection_link&creator=34784294"
 	},
 	"item": [
 		{
-			"name": "3rd party Copy",
+			"name": "3rd party",
 			"event": [
 				{
 					"listen": "test",
@@ -75,7 +75,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://backend1/thirdParty/users",
+					"raw": "http://backend1:3000/thirdParty/users",
 					"protocol": "http",
 					"host": [
 						"backend1"
