@@ -99,7 +99,7 @@ services:
       context: backend-testing
       dockerfile: Dockerfile
     volumes:
-      - ./backend-testing/report:/etc/newman/newman
+      - ./backend-testing/reports:/etc/newman/newman
 
   mock_api:
     image: mock-api:latest
