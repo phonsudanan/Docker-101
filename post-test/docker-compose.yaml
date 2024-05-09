@@ -98,16 +98,15 @@ services:
     build: 
       context: backend-testing
       dockerfile: Dockerfile
-    container_name: backend-test
     volumes:
-      - ./backend-testing/reports:/etc/newman/reports
+      - ./backend-testing/report:/etc/newman/newman
 
   mock_api:
     image: mock-api:latest
+    container_name: mock-api
     build: 
       context: mountebank
       dockerfile: Dockerfile
-    container_name: mock-api
     ports:
       - 2525:2525
       - 8090:8090
