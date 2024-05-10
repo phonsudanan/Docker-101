@@ -34,6 +34,36 @@ services:
       retries: 5
       start_period: 5s
 
+  # backend1:
+  #   image: backend1:1.0
+  #   build: 
+  #     context: backend1
+  #     dockerfile: Dockerfile
+  #   container_name: backend1
+  #   ports:
+  #     - 3000:3000
+  #   environment:
+  #     NODE_TLS_REJECT_UNAUTHORIZED: 0
+  #     DB1_HOST: db_01
+  #     DB1_NAME: postgres
+  #     DB1_USER: postgres
+  #     DB1_PASSWORD: postgres
+  #     DB2_HOST: db_02
+  #     DB2_NAME: postgres
+  #     DB2_USER: postgres
+  #     DB2_PASSWORD: postgres
+  #   healthcheck:
+  #     test: wget --no-verbose --tries=1 --spider http://localhost:3000/merchant || exit 1
+  #     interval: 5s
+  #     timeout: 5s
+  #     retries: 5
+  #     start_period: 5s
+  #   depends_on:
+  #     db_01:
+  #       condition: service_healthy
+  #     db_02:
+  #       condition: service_healthy
+
   backend1:
     image: backend1:1.0
     build: 
@@ -43,7 +73,6 @@ services:
     ports:
       - 3000:3000
     environment:
-      NODE_TLS_REJECT_UNAUTHORIZED: 0
       DB1_HOST: db_01
       DB1_NAME: postgres
       DB1_USER: postgres
@@ -53,7 +82,7 @@ services:
       DB2_USER: postgres
       DB2_PASSWORD: postgres
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready", "-d", "postgres"]
+      test: wget --no-verbose --tries=1 --spider http://localhost:3000/merchants || exit 1
       interval: 5s
       timeout: 5s
       retries: 5
@@ -82,7 +111,7 @@ services:
       DB2_USER: postgres
       DB2_PASSWORD: postgres
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready", "-d", "postgres"]
+      test: wget --no-verbose --tries=1 --spider http://localhost:3001/pets || exit 1
       interval: 5s
       timeout: 5s
       retries: 5
@@ -99,7 +128,18 @@ services:
       context: backend-testing
       dockerfile: Dockerfile
     volumes:
-      - ./backend-testing/reports:/etc/newman/newman
+      - ./backend-testing/report:/etc/newman/newman
+
+  # backend_test:
+  #   build: ./backend-testing
+  #   container_name: backend-test
+  #   volumes:
+  #     - ./backend-testing/reports:/etc/newman/reports
+  #   depends_on:
+  #     backend1:
+  #       condition: service_healthy
+  #     backend2:
+  #       condition: service_healthy
 
   mock_api:
     image: mock-api:latest
